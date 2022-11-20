@@ -1,0 +1,141 @@
+{
+  "sales": [
+    {
+      "id": 1,
+      "category_id": 1,
+      "title": "Belle vente mobilière",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "live": true
+    },
+    {
+      "id": 2,
+      "category_id": 2,
+      "title": "Belle vente d'art",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "live": false
+    },
+    {
+      "id": 3,
+      "category_id": 1,
+      "title": "Belle vente mobilière",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "live": true
+    },
+    {
+      "id": 4,
+      "category_id": 2,
+      "title": "Belle vente d'art",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "live": false
+    },
+    {
+      "id": 5,
+      "category_id": 1,
+      "title": "Belle vente mobilière",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "live": true
+    },
+    {
+      "id": 6,
+      "category_id": 2,
+      "title": "Belle vente d'art",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "live": false
+    },
+    {
+      "title": "sdf",
+      "description": "sdf",
+      "live": true,
+      "id": 7
+    },
+    {
+      "title": "sdf",
+      "description": "sdf",
+      "live": true,
+      "id": 8
+    },
+    {
+      "title": "fgh",
+      "description": "fgh",
+      "live": true,
+      "id": 9
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "sale_id": 1,
+      "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
+    },
+    {
+      "id": 2,
+      "sale_id": 1,
+      "description": "Ecole Française fin XIXème 'E. De Varine Bohan','Portrait du chevalier du Haumel'. Huile sur toile signée en gravure sur la cadre et derrière 1896. Dimensions : 93 X 73 cm. Cadre style régence."
+    },
+    {
+      "id": 3,
+      "sale_id": 2,
+      "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
+    },
+    {
+      "id": 4,
+      "sale_id": 2,
+      "description": "Ecole Française fin XIXème 'E. De Varine Bohan','Portrait du chevalier du Haumel'. Huile sur toile signée en gravure sur la cadre et derrière 1896. Dimensions : 93 X 73 cm. Cadre style régence."
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Ameublement",
+      "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
+    },
+    {
+      "id": 2,
+      "title": "Art et décoration"
+    },
+    {
+      "id": 3,
+      "title": "Mode et bijoux"
+    },
+    {
+      "id": 4,
+      "title": "Horlogerie"
+    },
+    {
+      "id": 5,
+      "title": "Musique"
+    },
+    {
+      "id": 6,
+      "title": "Vin et spiritueux"
+    },
+    {
+      "id": 7,
+      "title": "Collections"
+    },
+    {
+      "id": 8,
+      "title": "Arts de la table"
+    },
+    {
+      "id": 9,
+      "title": "Jouets"
+    },
+    {
+      "id": 10,
+      "title": "Informatique et téléphonie"
+    },
+    {
+      "id": 11,
+      "title": "Voitures de sport et de collection"
+    },
+    {
+      "id": 12,
+      "title": "Autres véhicules et engins"
+    },
+    {
+      "id": 13,
+      "title": "Éléctoménager mériel pro."
+    }
+  ]
+}
