@@ -35,3 +35,5 @@ Cet unique champ de recherche sera capable de trouver des ventes et des lots, à
 ### Bonus
 
 - Ajouter le konami code qui affiche un gif de votre choix
+
+Node version : v13.13.0
