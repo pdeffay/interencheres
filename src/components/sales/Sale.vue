@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div>
+    <h1>
       {{sale.title}}
-    </div>
+    </h1>
     <ItemList :items="items" />
   </div>
 </template>
@@ -23,7 +23,6 @@ export default {
 			items: [],
       sale: Object
 		}
-    
   },
   computed: {
     ...mapGetters({
