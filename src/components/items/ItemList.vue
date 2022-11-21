@@ -17,10 +17,5 @@ export default {
 	props: {
 		items: []
 	},
-  methods: {
-    ooo() {
-      this.$router.push({name:"sale", params: { id: this.item.id }})
-    }
-  }
 }
 </script>

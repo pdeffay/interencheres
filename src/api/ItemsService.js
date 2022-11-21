@@ -7,7 +7,14 @@ async function fetchItems() {
     return items.data;
 }
 
-async function fetchItemsFromSale(saleId) {
+async function fetchItemList(searchString) {
+    let items = [];    
+    items = await axios.get(`${baseUrl}/items?q=${searchString}`);
+    return items.data;
+}
+
+
+async function fetchItemsBySaleId(saleId) {
     let items = [];    
     items = await axios.get(`${baseUrl}/items?sale_id=${saleId}`);
     return items.data;
@@ -15,5 +22,6 @@ async function fetchItemsFromSale(saleId) {
 
 export const itemsService = {
     fetchItems,
-    fetchItemsFromSale
+    fetchItemList,
+    fetchItemsBySaleId
 };

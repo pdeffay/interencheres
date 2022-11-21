@@ -16,22 +16,20 @@ import { salesService } from "@/api/SalesService";
 import SaleCard  from './SaleCard';
 
 export default {
-  name: 'SalesList',
+  name: 'SaleList',
   components: {
     SaleCard
   },
   props: {
-    msg: String
+    msg: String,
+    items: []
   },
   data() {
     return {
-      items: [],
       selectedSale: {}
     };
   },
-  async created() {
-    this.items = await salesService.fetchSales();
-  }
+  
 }
 </script>
 

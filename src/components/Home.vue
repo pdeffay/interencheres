@@ -1,32 +1,30 @@
 <template>
 <div>
-  <SalesList></SalesList>
-   <v-btn
-        
-        fab
-        large
-        dark
-        absolute
-        bottom
-        left
-        class="v-btn--example"
-        @click="ddd"
-      >
-        <v-icon>mdi-plus</v-icon>
-      </v-btn>
-
+  <SaleList :items="items"></SaleList>
+  <v-btn
+    fab
+    large
+    dark
+    absolute
+    bottom
+    left
+    class="v-btn--example"
+    @click="ddd"
+  >
+    <v-icon>mdi-plus</v-icon>
+  </v-btn>
 </div>
 
 </template>
 
 <script>
 import { salesService } from "@/api/SalesService";
-import SalesList  from './sales/SalesList';
+import SaleList  from '@/components/sales/SaleList';
 
 export default {
   name: 'Home',
   components: {
-    SalesList
+    SaleList
   },
 
   props: {

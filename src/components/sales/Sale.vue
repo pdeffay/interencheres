@@ -3,14 +3,20 @@
     <h1>
       {{sale.title}}
     </h1>
-    <ItemList :items="items" />
+    <div v-if="items.length > 0">
+      <ItemList :items="items" />
+    </div>
+    <div v-else>
+      <h2>Aucun lot</h2>
+    </div>
   </div>
 </template>
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import ItemList from '../items/ItemList.vue';
+import ItemList from '@/components/items/ItemList.vue';
 import { itemsService } from "@/api/ItemsService";
+import { salesService } from "@/api/SalesService";
 
 export default {
   name: 'Sale',
@@ -34,14 +40,23 @@ export default {
       setSelectedSale: "salesModule/setSelectedSale"
     }),
   },
-  async created() {
-    this.sale = this.getSelectedSale;
-    if(this.sale) {
-      this.items = await itemsService.fetchItemsFromSale(this.sale.id);
+  async beforeCreate() {
+    // Si on a une vente de sélectionnée dans le store
+    if (this.getSelectedSale){
+      this.sale = this.getSelectedSale;
+      if(this.sale) {
+        this.items = await itemsService.fetchItemsBySaleId(this.sale.id);
+      }
+    // Sinon on récupère depuis l'id dans l'URL  
+    } else {
+      this.sale = await salesService.fetchSale(this.$route.params.id);
+      if (this.sale) {
+        this.items = await itemsService.fetchItemsBySaleId(this.sale.id);
+      }
     }
   },
   beforeDestroy() {
-    // this.setSelectedSale(null);
+    this.setSelectedSale(null);
   },
 }
 </script>

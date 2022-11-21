@@ -66,14 +66,14 @@ export default {
     }
   },
   methods: {
-     async validate () {
-        const sale = {
-          title: this.title,
-          description: this.description,
-          live: this.checkbox
-        }
-        await salesService.postSale(sale);
-      },
+    async validate () {
+      const sale = {
+        title: this.title,
+        description: this.description,
+        live: this.checkbox
+      }
+      await salesService.postSale(sale);
+    },
   }
 }
 </script>

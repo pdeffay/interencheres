@@ -34,16 +34,16 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
   color: white;
   background: #121212
 }
 
 .main {
- display: flex;
+  display: flex;
   flex: 1 0 auto;
   max-width: 100%;
   transition: .2s cubic-bezier(.4,0,.2,1);
+  margin-top: 64px;
 
   &-wrap {
     flex: 1 1 auto;

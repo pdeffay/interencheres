@@ -1,100 +1,46 @@
 <template>
-<div>
- <v-app-bar
-      color="deep-purple accent-4"
-      dense
-      dark
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-
-      <v-toolbar-title>Page title</v-toolbar-title>
-
-      <v-spacer></v-spacer>
-
-      <v-btn icon>
-        <v-icon>mdi-heart</v-icon>
-      </v-btn>
-
-      <v-btn icon>
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
-      <v-menu
-        left
-        bottom
-      >
-        <template v-slot:activator="{ on, attrs }">
-          <v-btn
-            icon
-            v-bind="attrs"
-            v-on="on"
-          >
-            <v-icon>mdi-dots-vertical</v-icon>
-          </v-btn>
-        </template>
-
-        <v-list>
-          <v-list-item
-            v-for="n in 5"
-            :key="n"
-            @click="() => {}"
-          >
-            <v-list-item-title>Option {{ n }}</v-list-item-title>
-          </v-list-item>
-        </v-list>
-      </v-menu>
-    </v-app-bar>
-        <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      bottom
-      temporary
-    >
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          v-model="group"
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Bar</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Fizz</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title>Buzz</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-    </v-navigation-drawer>
-    </div>
+  <div>
+    <v-app-bar dark app>
+			<v-toolbar-title>Interencheres 2</v-toolbar-title>
+			<v-spacer></v-spacer>
+			<v-text-field v-model.trim="searchText" dense filled rounded clearable placeholder="Search" prepend-inner-icon="mdi-magnify" class="pt-6 shrink expanding-search" :class="{ closed: searchBoxClosed && !searchText }" @keyup.enter="onSearch" @focus="searchBoxClosed = false" @blur="searchBoxClosed = true"></v-text-field>
+		</v-app-bar>
+  </div>
 </template>
 
 <script>
-
 export default {
   name: 'Header',
   data() {
     return {
       drawer: false,
       group: null,
+      searchText: null,
+		  searchBoxClosed: false
     }
   },
-
   watch: {
     group () {
       this.drawer = false
     },
+  },
+  methods: {
+    onSearch() {
+      this.$router.push({path:"/search", query: { search: this.searchText }});
+    }
   }
 }
-
 </script>
+
+<style lang="scss">
+.v-input.expanding-search {
+  margin-top: 26px !important;
+  transition: max-width 0.5s;
+  .v-icon {
+    padding-right: 10px;
+  }
+}
+.v-input.expanding-search.closed {
+  max-width: 70px;
+}
+</style>

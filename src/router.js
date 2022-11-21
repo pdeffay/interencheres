@@ -1,8 +1,9 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-import Home from "./components/Home.vue";
-import Sale from "./components/sales/Sale.vue";
-import Add from "./components/sales/Add.vue";
+import Home from "@//components/Home.vue";
+import Sale from "@//components/sales/Sale.vue";
+import Add from "@//components/sales/Add.vue";
+import SearchResult from "@/components/search/SearchResult";
 
 Vue.use(VueRouter);
 
@@ -21,7 +22,13 @@ const routes = [
         path: "/sale/new",
         name: "add",
         component: Add
+    },
+    {
+        path: "/search",
+        name: "search",
+        component: SearchResult
     }
+    
 ];
 
 const router = new VueRouter({
