@@ -20,8 +20,7 @@ const routes = [
     {
         path: "/sale/new",
         name: "add",
-        component: Add,
-        alias: ['/sale/new'],
+        component: Add
     }
 ];
 

@@ -8,30 +8,41 @@
 </template>
 
 <script>
-import axios from "axios";
-import ItemList from '../items/ItemList.vue'
-import { fetchItemsFromSale  } from '../../services/ItemsServices';
-import { fetchSaleFromId } from '../../services/SalesServices'
+import { mapActions, mapGetters } from "vuex";
+import ItemList from '../items/ItemList.vue';
+import { itemsService } from "@/api/ItemsService";
+
 export default {
   name: 'Sale',
   components: {
     ItemList
   },
+
   data() {
 		return {
 			items: [],
-      sale: []
+      sale: Object
 		}
     
   },
+  computed: {
+    ...mapGetters({
+      getSelectedSale: "salesModule/getSelectedSale"
+    }),
+  },
+  methods: {
+    ...mapActions({
+      setSelectedSale: "salesModule/setSelectedSale"
+    }),
+  },
   async created() {
-    await fetchSaleFromId(1).then(saleApi => {
-      this.sale = saleApi.data[0];
-    });
-
-    fetchItemsFromSale(1).then(itemsAPI => {
-			this.items = itemsAPI.data;
-    });
-  }
+    this.sale = this.getSelectedSale;
+    if(this.sale) {
+      this.items = await itemsService.fetchItemsFromSale(this.sale.id);
+    }
+  },
+  beforeDestroy() {
+    // this.setSelectedSale(null);
+  },
 }
 </script>

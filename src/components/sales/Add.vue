@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { postSale } from '../../services/SalesServices';
+import { salesService } from "@/api/SalesService";
 export default {
   name: 'Add',
   data() {
@@ -72,7 +72,7 @@ export default {
           description: this.description,
           live: this.checkbox
         }
-        await postSale(sale);
+        await salesService.postSale(sale);
       },
   }
 }

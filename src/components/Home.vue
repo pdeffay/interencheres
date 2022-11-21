@@ -20,9 +20,7 @@
 </template>
 
 <script>
-import axios from "axios";
-import { fetchSales } from '../services/SalesServices';
-
+import { salesService } from "@/api/SalesService";
 import SalesList  from './sales/SalesList';
 
 export default {
@@ -30,19 +28,21 @@ export default {
   components: {
     SalesList
   },
+
   props: {
     msg: String
   },
+
   data() {
     return {
       items: [],
     };
   },
+
   async created() {
-    fetchSales().then(salesAPI => {
-      this.items = salesAPI.data;
-    });
+    this.items = await salesService.fetchSales();
   },
+
   methods: {
     ddd() {
       this.$router.push({name: 'add'})

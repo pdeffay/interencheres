@@ -1,14 +1,19 @@
 import axios from 'axios'
 const baseUrl = 'http://localhost:3000';
 
-export async function fetchItems() {
+async function fetchItems() {
     let items = [];    
     items = await axios.get(`${baseUrl}/items`);
-    return items;
+    return items.data;
 }
 
-export async function fetchItemsFromSale(saleId) {
+async function fetchItemsFromSale(saleId) {
     let items = [];    
     items = await axios.get(`${baseUrl}/items?sale_id=${saleId}`);
-    return items;
+    return items.data;
 }
+
+export const itemsService = {
+    fetchItems,
+    fetchItemsFromSale
+};

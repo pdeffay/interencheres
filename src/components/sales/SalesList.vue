@@ -11,7 +11,7 @@
 
 <script>
 import axios from "axios";
-import { fetchSales } from '../../services/SalesServices';
+import { salesService } from "@/api/SalesService";
 
 import SaleCard  from './SaleCard';
 
@@ -30,9 +30,7 @@ export default {
     };
   },
   async created() {
-    fetchSales().then(salesAPI => {
-      this.items = salesAPI.data;
-    });
+    this.items = await salesService.fetchSales();
   }
 }
 </script>

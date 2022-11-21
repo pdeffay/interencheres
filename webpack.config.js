@@ -1,3 +1,4 @@
+const path = require('path');
 module.exports = {
     module: {
       rules: [
@@ -14,6 +15,12 @@ module.exports = {
           ]
         }
       ]
+    },
+    resolve: {
+      extensions: ['.js', '.vue', '.json'],
+      alias: {
+        '@': path.resolve('src'),
+      }
     },
     // plugin omitted
   }

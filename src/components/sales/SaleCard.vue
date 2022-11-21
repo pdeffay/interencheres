@@ -3,7 +3,7 @@
  <v-card
     class="mx-auto my-12"
     max-width="374"
-    @click="ooo"
+    @click="openSale"
   >
     <template slot="progress">
       <v-progress-linear
@@ -28,14 +28,20 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: 'SaleCard',
   props: {
-    item: Object
+    item: []
   },
 
   methods: {
-    ooo() {
+    ...mapActions({
+      setSelectedSale: "salesModule/setSelectedSale"
+    }),
+
+    openSale() {
+      this.setSelectedSale(this.item);
       this.$router.push({name:"sale", params: { id: this.item.id }})
     }
   }
