@@ -16,10 +16,10 @@
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
-    <v-card-title>{{ item.title }}</v-card-title>
+    <v-card-title :v-html="highlightTitle" />
 
     <v-card-text>
-      <div>{{ item.description }}</div>
+      <div v-html="highlightDescription"></div>
     </v-card-text>
 
   </v-card>
@@ -27,13 +27,36 @@
 
 <script>
 export default {
-  name: 'SaleCard',
+  name: 'ItemCard',
   props: {
-    item: Object
+    item: Object,
+    searchedString: String
   },
-
+  computed: {
+    highlightDescription() {
+      if(!this.searchedString) {
+        return this.item.description;
+      }
+      return this.item.description.replace(new RegExp(this.searchedString, "gi"), match => {
+          return '<span class="highlightText">' + match + '</span>';
+      });
+    },
+    highlightTitle() {
+      if(!this.searchedString) {
+        return this.item.title;
+      }
+      return this.item.title.replace(new RegExp(this.searchedString, "gi"), match => {
+          return '<span class="highlightText">' + match + '</span>';
+      });
+    }
+  },
   methods: {
     
   }
 }
 </script>
+<style>
+.highlightText {
+  color: red
+}
+</style>

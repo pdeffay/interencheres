@@ -5,6 +5,8 @@
       "category_id": 1,
       "title": "Belle vente mobilière",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2022-11-02",
+      "city": "Brive-la-Gaillarde",
       "live": true
     },
     {
@@ -12,6 +14,8 @@
       "category_id": 2,
       "title": "Belle vente d'art",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2022-12-13",
+      "city": "Paris",
       "live": false
     },
     {
@@ -19,6 +23,8 @@
       "category_id": 1,
       "title": "Belle vente mobilière",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2023-02-22",
+      "city": "Roubaix",
       "live": true
     },
     {
@@ -26,6 +32,8 @@
       "category_id": 2,
       "title": "Belle vente d'art",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2022-12-08",
+      "city": "Douai",
       "live": false
     },
     {
@@ -33,6 +41,8 @@
       "category_id": 1,
       "title": "Belle vente mobilière",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2023-01-02",
+      "city": "BORDEAUX",
       "live": true
     },
     {
@@ -40,46 +50,34 @@
       "category_id": 2,
       "title": "Belle vente d'art",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2022-12-24",
+      "city": "Compiègne",
       "live": false
-    },
-    {
-      "title": "sdf",
-      "description": "sdf",
-      "live": true,
-      "id": 7
-    },
-    {
-      "title": "sdf",
-      "description": "sdf",
-      "live": true,
-      "id": 8
-    },
-    {
-      "title": "fgh",
-      "description": "fgh",
-      "live": true,
-      "id": 9
     }
   ],
   "items": [
     {
       "id": 1,
       "sale_id": 1,
+      "title": "dd",
       "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
     },
     {
       "id": 2,
       "sale_id": 1,
+      "title": "dd",
       "description": "Ecole Française fin XIXème 'E. De Varine Bohan','Portrait du chevalier du Haumel'. Huile sur toile signée en gravure sur la cadre et derrière 1896. Dimensions : 93 X 73 cm. Cadre style régence."
     },
     {
       "id": 3,
       "sale_id": 2,
+      "title": "dd",
       "description": "zkefhzkelfhzklfjhazklefjhzqkel  IXème. Dimensions : 8,5 X11,3 cm."
     },
     {
       "id": 4,
       "sale_id": 2,
+      "title": "dd",
       "description": "6456746516541984589145645784485 gravure sur la cadre et derrière 1896. Dimensions : 93 X 73 cm. Cadre style régence."
     }
   ],
@@ -87,55 +85,80 @@
     {
       "id": 1,
       "title": "Ameublement",
-      "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
+      "slug": "ameublement",
+      "description": "Adepte du mobilier empire, collectionneur de pièces de design contemporain ou à la recherche de bonnes affaires sur la décoration ? Votre bonheur se cache ici. "
     },
     {
       "id": 2,
-      "title": "Art et décoration"
+      "title": "Art et décoration",
+      "slug": "art-et-decoration",
+      "description" : "Arts de toutes les civilisations, savoir-faire locaux, tableaux de maîtres et objets d’art contemporain : découvrez une grande variété d'œuvres et d’objets de décoration."
     },
     {
       "id": 3,
-      "title": "Mode et bijoux"
+      "title": "Mode et bijoux",
+      "slug": "mode-et-bijoux",
+      "description": "Pièces de créateurs et essentiels vintage : découvrez toute la mode, la joaillerie, et le linge de maison aux enchères."
     },
     {
       "id": 4,
-      "title": "Horlogerie"
+      "title": "Horlogerie",
+      "slug": "horlogerie",
+      "description": "Tic-tac et balanciers rythmeront les enchères des prochaines ventes."
     },
     {
       "id": 5,
-      "title": "Musique"
+      "title": "Musique",
+      "slug": "musique",
+      "description": "Amateurs, aficionados et professionnels, soyez à l'écoute de ces ventes : instruments de tous horizons se donnent rendez-vous."
     },
     {
       "id": 6,
-      "title": "Vin et spiritueux"
+      "title": "Vin et spiritueux",
+      "slug": "vins-spiritueux",
+      "description": "Toute la saga des millésimes se déroule dans ces ventes aux enchères…"
     },
     {
       "id": 7,
-      "title": "Collections"
+      "title": "Collections",
+      "slug": "collections",
+      "description": "Avis aux collectionneurs : militaria, numismatique, philatélie, archéologie ou cartes postales, ces ventes vous sont dédiées !"
     },
     {
       "id": 8,
-      "title": "Arts de la table"
+      "title": "Arts de la table",
+      "slug": "argenterie-orfevrerie-metal-argente",
+      "description": "Pièces d'orfèvrerie et d'argenterie scintilleront dans les prochaines ventes aux enchères..."
     },
     {
       "id": 9,
-      "title": "Jouets"
+      "title": "Jouets",
+      "slug": "jouets",
+      "description": "Collectionneurs ou simples amateurs, ces ventes vous sont dédiées : jouets, trains, poupées, automates seront à l'honneur."
     },
     {
       "id": 10,
-      "title": "Informatique et téléphonie"
+      "title": "Informatique et téléphonie",
+      "slug": "mobilier-et-materiel-de-bureau-informatique",
+      "description": "Du mobilier de bureau aux éléments informatiques, vous trouverez dans ces ventes de quoi créer votre espace de travail."
     },
     {
       "id": 11,
-      "title": "Voitures de sport et de collection"
+      "title": "Voitures de sport et de collection",
+      "slug": "autres-vehicules-et-engins",
+      "description": "Amateurs et grands collectionneurs, découvrez toute la gamme de véhicules historiques et de voitures de luxe."
     },
     {
       "id": 12,
-      "title": "Autres véhicules et engins"
+      "title": "Autres véhicules et engins",
+      "slug": "autres-vehicules-et-engins",
+      "description": "Des bateaux aux avions en passant par toute une panoplie de véhicules terrestres, voitures, camions et motos, découvrez les véhicules et engins aux enchères."
     },
     {
       "id": 13,
-      "title": "Éléctoménager mériel pro."
+      "title": "Éléctoménager matériel pro.",
+      "slug": "materiels-professionnels",
+      "description": "Petit outillage et électroménager de seconde main ainsi qu’une large variété de matériels professionnels en vente aux enchères."
     }
   ]
 }

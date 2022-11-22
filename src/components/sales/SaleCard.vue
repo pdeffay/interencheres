@@ -5,12 +5,22 @@
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     >
-      <v-card-title>{{ item.title }}</v-card-title>
+      <v-card-title>{{ sale.title }}</v-card-title>
     </v-img>
-    <v-card-subtitle class="pb-0">{{ item.subtitle }}</v-card-subtitle>
+    <v-card-subtitle class="pb-0">{{ sale.subtitle }}</v-card-subtitle>
     <v-card-text class="text--primary">
-      <div>{{ item.description }}</div>
+      <div>{{ sale.description }}</div>
     </v-card-text>
+    <v-list-item>
+      <v-list-item-icon>
+        <v-icon>mdi-map-marker</v-icon>
+      </v-list-item-icon>
+      <v-list-item-subtitle>{{sale.city}}</v-list-item-subtitle>
+      <v-list-item-icon>
+        <v-icon>mdi-clock</v-icon>
+      </v-list-item-icon>
+      <v-list-item-subtitle>{{sale.date}}</v-list-item-subtitle>
+    </v-list-item>
     <v-card-actions>
       <v-btn color="primary" text>Voir</v-btn>
     </v-card-actions>
@@ -22,7 +32,8 @@ import { mapActions } from "vuex";
 export default {
   name: 'SaleCard',
   props: {
-    item: []
+    sale: Object,
+    searchedString: String
   },
 
   methods: {
@@ -31,8 +42,8 @@ export default {
     }),
 
     openSale() {
-      this.setSelectedSale(this.item);
-      this.$router.push({name:"sale", params: { id: this.item.id }})
+      this.setSelectedSale(this.sale);
+      this.$router.push({name:"sale", params: { id: this.sale.id }})
     }
   }
 }

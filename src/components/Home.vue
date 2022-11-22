@@ -1,11 +1,11 @@
 <template>
   <v-main>
-    <SaleList :items="items"></SaleList>
+    <CategoryList :categories="categories" />
     <v-btn
       fab
       large
       dark
-      absolute
+      fixed
       bottom
       left
       class="v-btn--example"
@@ -17,13 +17,13 @@
 </template>
 
 <script>
-import { salesService } from "@/api/SalesService";
-import SaleList  from '@/components/sales/SaleList';
+import { categoriesService } from "@/api/CategoriesService";
+import CategoryList  from '@/components/categories/CategoryList';
 
 export default {
   name: 'Home',
   components: {
-    SaleList
+    CategoryList
   },
 
   props: {
@@ -32,12 +32,12 @@ export default {
 
   data() {
     return {
-      items: [],
+      categories: [],
     };
   },
 
   async created() {
-    this.items = await salesService.fetchSales();
+    this.categories = await categoriesService.fetchCategories();
   },
 
   methods: {

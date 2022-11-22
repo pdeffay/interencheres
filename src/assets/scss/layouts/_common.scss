@@ -51,6 +51,18 @@
       }
     }
   }
+  &-left {
+    padding-top: 0px;
+    > div {
+      >h2 {
+        margin-bottom: 10px;
+       &:after {
+         left: 2.5%;
+       }
+      }
+    }
+  
+   }
 }
 
 // iframe

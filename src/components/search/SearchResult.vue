@@ -1,27 +1,18 @@
 <template>
-  <v-container>
-    <v-tabs
-      fixed-tabs
-      background-color="grey"
-      dark
-      absolute
-    >
+  <v-container class="pt-0">
+    <v-tabs fixed-tabs background-color="grey" dark absolute>
       <v-tab href="#tab-1">
-        {{ itemsFound.length }} lots trouvés
+        {{ itemsFound.length > 0 ? `${itemsFound.length} lots` : '0 lot'}}
       </v-tab>
-      <v-tab-item
-          :value="'tab-1'"
-        >
-          <ItemList :items="itemsFound" />
+      <v-tab-item :value="'tab-1'">
+        <ItemList :items="itemsFound" :searchedString="searchedString"/>
         </v-tab-item>
       <v-tab href="#tab-2">
-        {{ salesFound.length }} ventes trouvées
+        {{ salesFound.length > 0 ? `${salesFound.length} ventes` : '0 vente'}}
       </v-tab>
-      <v-tab-item
-          :value="'tab-2'"
-        >
-          <SaleList :items="salesFound" />
-        </v-tab-item>
+      <v-tab-item :value="'tab-2'">
+        <SaleList :items="salesFound" :searchedString="searchedString" />
+      </v-tab-item>
     </v-tabs>
   </v-container>
 </template>

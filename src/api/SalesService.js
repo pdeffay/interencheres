@@ -26,9 +26,17 @@ async function postSale(sale) {
     await axios.post(`${baseUrl}/sales`, sale);
 }
 
+async function fetchSalesByCategoryId(categoryId) {
+    let sales = [];     
+    console.log(categoryId);
+    sales = await axios.get(`${baseUrl}/sales?category_id=${categoryId}`);
+    return sales.data;
+}
+
 export const salesService = {
     fetchSales,
     fetchSaleList,
+    fetchSalesByCategoryId,
     fetchSale,
     postSale
 };

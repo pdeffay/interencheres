@@ -3,8 +3,8 @@
     <v-container>
       <h2 class="text-center">Ventes</h2>
         <v-row>
-          <v-col v-for="item of items" :key="item.id" class="d-flex child-flex" cols="12">
-            <SaleCard :item="item" />
+          <v-col v-for="sale of sales" :key="sale.id" class="d-flex child-flex" cols="6">
+            <SaleCard :sale="sale" :searchedString="searchedString" />
           </v-col>
         </v-row>
     </v-container>
@@ -20,16 +20,8 @@ export default {
     SaleCard
   },
   props: {
-    msg: String,
-    items: []
-  },
-  data() {
-    return {
-      selectedSale: {}
-    };
-  },
-  created() {
-    console.log(this.items);
+    searchedString: String,
+    sales: []
   }
 }
 </script>
