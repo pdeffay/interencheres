@@ -3,6 +3,21 @@
       <v-toolbar flat class="mainHeader">
         <v-toolbar-title>Interencheres 2</v-toolbar-title>
         <v-spacer></v-spacer>
+        <v-text-field
+          v-model.trim="searchText"
+          dense
+          filled
+          rounded
+          clearable
+          placeholder="Search"
+          prepend-inner-icon="mdi-magnify"
+          class="shrink expanding-search"
+          :class="{ closed: searchBoxClosed && !searchText }"
+          @keyup.enter="onSearch"
+          @focus="searchBoxClosed = false"
+          @blur="searchBoxClosed = true"
+        >
+        </v-text-field>
         <v-toolbar-items class="hidden-xs-only">
           <v-btn text><router-link to="/">Acceuil</router-link></v-btn>
           <v-btn text><router-link to="/sales">Ventes</router-link></v-btn>
@@ -27,8 +42,6 @@
           </v-menu>
         </div>
       </v-toolbar>
-      <!-- <v-spacer></v-spacer> -->
-      <!-- <v-text-field v-model.trim="searchText" dense filled rounded clearable placeholder="Search" prepend-inner-icon="mdi-magnify" class="pt-6 shrink expanding-search" :class="{ closed: searchBoxClosed && !searchText }" @keyup.enter="onSearch" @focus="searchBoxClosed = false" @blur="searchBoxClosed = true"></v-text-field> -->
   </v-container>
 </template>
 

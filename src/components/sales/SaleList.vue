@@ -27,6 +27,9 @@ export default {
     return {
       selectedSale: {}
     };
+  },
+  created() {
+    console.log(this.items);
   }
 }
 </script>
