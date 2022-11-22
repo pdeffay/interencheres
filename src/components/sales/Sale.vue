@@ -1,15 +1,5 @@
 <template>
-  <div>
-    <h1>
-      {{sale.title}}
-    </h1>
-    <div v-if="items.length > 0">
-      <ItemList :items="items" />
-    </div>
-    <div v-else>
-      <h2>Aucun lot</h2>
-    </div>
-  </div>
+  <ItemList :items="items" />
 </template>
 
 <script>

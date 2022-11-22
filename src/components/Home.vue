@@ -1,20 +1,19 @@
 <template>
-<div>
-  <SaleList :items="items"></SaleList>
-  <v-btn
-    fab
-    large
-    dark
-    absolute
-    bottom
-    left
-    class="v-btn--example"
-    @click="ddd"
-  >
-    <v-icon>mdi-plus</v-icon>
-  </v-btn>
-</div>
-
+  <v-main>
+    <SaleList :items="items"></SaleList>
+    <v-btn
+      fab
+      large
+      dark
+      absolute
+      bottom
+      left
+      class="v-btn--example"
+      @click="ddd"
+    >
+      <v-icon>mdi-plus</v-icon>
+    </v-btn>
+  </v-main>
 </template>
 
 <script>
@@ -48,14 +47,3 @@ export default {
   }
 }
 </script>
-
-<style>
-li {
-  list-style: none;
-  margin-right: 40px; 
-}
-ul {
-  display: flex;
-  justify-content: space-around;
-}
-</style>

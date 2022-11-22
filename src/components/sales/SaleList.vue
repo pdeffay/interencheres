@@ -1,18 +1,17 @@
 <template>
-  <div>
-    <h1>Les ventes</h1>
-    <div class="flex-wrap">  
-      <div v-for="item of items" :key="item.id" >
-        <SaleCard :item="item" />
-      </div>
-    </div>
+  <div class="block">
+    <v-container>
+      <h2 class="text-center">Ventes</h2>
+        <v-row>
+          <v-col v-for="item of items" :key="item.id" class="d-flex child-flex" cols="12">
+            <SaleCard :item="item" />
+          </v-col>
+        </v-row>
+    </v-container>
   </div>
 </template>
 
 <script>
-import axios from "axios";
-import { salesService } from "@/api/SalesService";
-
 import SaleCard  from './SaleCard';
 
 export default {
@@ -28,14 +27,6 @@ export default {
     return {
       selectedSale: {}
     };
-  },
-  
+  }
 }
 </script>
-
-<style>
-.flex-wrap {
-  display: flex;
-  flex-wrap: wrap;
-}
-</style>
