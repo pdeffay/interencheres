@@ -1,14 +1,7 @@
 <template>
-
- <v-card
-    class="mx-auto my-12"
-  >
+  <v-card class="mx-auto my-12">
     <template slot="progress">
-      <v-progress-linear
-        color="deep-purple"
-        height="10"
-        indeterminate
-      ></v-progress-linear>
+      <v-progress-linear color="deep-purple" height="10" indeterminate />
     </template>
 
     <v-img
