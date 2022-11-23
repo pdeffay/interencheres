@@ -1,7 +1,7 @@
 const getDefaultState = () => {
     return {
-      // Activité selectionnée pour traitement
       selectedCategory: null,
+      categoryList: []
     };
   };
   
@@ -10,7 +10,8 @@ const getDefaultState = () => {
   
   // getters
   const getters = {
-    getSelectedCategory: state => state.selectedCategory
+    getSelectedCategory: state => state.selectedCategory,
+    getCategoryList: state => state.categoryList
   };
   
   const mutations = {
@@ -20,7 +21,12 @@ const getDefaultState = () => {
   
     SET_SELECTED_CATEGORY(state, category) {
       state.selectedCategory = category;
-    }
+    },
+
+    SET_CATEGORY_LIST(state, categoryList) {
+      state.categoryList = categoryList;
+    },
+
   }
   
   // actions
@@ -31,6 +37,10 @@ const getDefaultState = () => {
   
     setSelectedCategory({ commit }, category) {
       commit("SET_SELECTED_CATEGORY", category);
+    },
+
+    setCategoryList({ commit }, categoryList) {
+      commit("SET_CATEGORY_LIST", categoryList);
     },
   };
   

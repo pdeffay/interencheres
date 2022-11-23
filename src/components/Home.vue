@@ -1,22 +1,14 @@
 <template>
   <v-main>
     <CategoryList :categories="categories" />
-    <v-btn
-      fab
-      large
-      dark
-      fixed
-      bottom
-      left
-      class="v-btn--example"
-      @click="ddd"
-    >
+    <v-btn fab large dark fixed bottom left class="v-btn--example" @click="redirectToNewSale">
       <v-icon>mdi-plus</v-icon>
     </v-btn>
   </v-main>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 import { categoriesService } from "@/api/CategoriesService";
 import CategoryList  from '@/components/categories/CategoryList';
 
@@ -38,12 +30,17 @@ export default {
 
   async created() {
     this.categories = await categoriesService.fetchCategories();
+    this.setCategoryList(this.categories);
   },
-
+  
   methods: {
-    ddd() {
+    ...mapActions({
+      setCategoryList: "categoriesModule/setCategoryList"
+    }),
+    redirectToNewSale() {
       this.$router.push({name: 'add'})
-    }
+    },
+    
   }
 }
 </script>

@@ -5,11 +5,13 @@
       height="200px"
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     >
-      <v-card-title>{{ sale.title }}</v-card-title>
+      <v-card-title>
+        <div v-html="highlightTitle"></div>  
+      </v-card-title>
     </v-img>
     <v-card-subtitle class="pb-0">{{ sale.subtitle }}</v-card-subtitle>
     <v-card-text class="text--primary">
-      <div>{{ sale.description }}</div>
+      <div v-html="highlightDescription"></div>
     </v-card-text>
     <v-list-item>
       <v-list-item-icon>
@@ -35,7 +37,24 @@ export default {
     sale: Object,
     searchedString: String
   },
-
+  computed: {
+    highlightDescription() {
+      if(!this.searchedString) {
+        return this.sale.description;
+      }
+      return this.sale.description.replace(new RegExp(this.searchedString, "gi"), match => {
+          return '<span class="highlightText">' + match + '</span>';
+      });
+    },
+    highlightTitle() {
+      if(!this.searchedString) {
+        return this.sale.title;
+      }
+      return this.sale.title.replace(new RegExp(this.searchedString, "gi"), match => {
+          return '<span class="highlightText">' + match + '</span>';
+      });
+    }
+  },
   methods: {
     ...mapActions({
       setSelectedSale: "salesModule/setSelectedSale"

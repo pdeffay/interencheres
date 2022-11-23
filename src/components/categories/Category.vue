@@ -1,9 +1,17 @@
 <template>
-  <div class="block block-left">
+  <div class="block block-left ">
     <v-container>
       <h2 class="text-left">{{category.title}}</h2>
       <h4 class="text-left">{{category.description}}</h4>
       <SaleList :sales="sales" />
+      <div v-if="sales.length === 0">
+        <h4 class="text-center">
+          Cette categorie ne comporte aucune vente pour l'instant.
+        </h4>
+        <h4 class="text-center">
+          Si vous voulez remédier à cela, c'est <router-link to="sale/new"><a>ici</a></router-link>.
+        </h4>
+      </div>
     </v-container>
     
   </div>

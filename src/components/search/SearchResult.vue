@@ -11,7 +11,7 @@
         {{ salesFound.length > 0 ? `${salesFound.length} ventes` : '0 vente'}}
       </v-tab>
       <v-tab-item :value="'tab-2'">
-        <SaleList :items="salesFound" :searchedString="searchedString" />
+        <SaleList :sales="salesFound" :searchedString="searchedString" />
       </v-tab-item>
     </v-tabs>
   </v-container>

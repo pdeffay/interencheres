@@ -19,7 +19,7 @@
     {
       "id": 3,
       "category_id": 1,
-      "title": "Belle vente mobilière",
+      "title": "Une deuxième belle vente mobilière",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
       "date": "2023-02-22",
       "city": "Roubaix"
@@ -27,7 +27,7 @@
     {
       "id": 4,
       "category_id": 2,
-      "title": "Belle vente d'art",
+      "title": "Une deuxième belle vente d'art",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
       "date": "2022-12-08",
       "city": "Douai"
@@ -35,7 +35,7 @@
     {
       "id": 5,
       "category_id": 1,
-      "title": "Belle vente mobilière",
+      "title": "Ah tiens une 3ème belle vente mobilière",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
       "date": "2023-01-02",
       "city": "BORDEAUX"
@@ -43,10 +43,25 @@
     {
       "id": 6,
       "category_id": 2,
-      "title": "Belle vente d'art",
+      "title": "Ah tiens une 3ème belle vente d'art",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
       "date": "2022-12-24",
       "city": "Compiègne"
+    },
+    {
+      "title": "dddddddddddddd",
+      "description": "dddddddddddddddddd",
+      "item_ids": [],
+      "id": 7
+    },
+    {
+      "title": "zzzzzzzzzzzzzz",
+      "description": "zzzzzzzzzzzzzzzz",
+      "item_ids": [],
+      "category_id": 5,
+      "city": "LAVAL",
+      "date": "2022-11-25",
+      "id": 8
     }
   ],
   "items": [
@@ -92,7 +107,7 @@
       "id": 2,
       "title": "Art et décoration",
       "slug": "art-et-decoration",
-      "description" : "Arts de toutes les civilisations, savoir-faire locaux, tableaux de maîtres et objets d’art contemporain : découvrez une grande variété d'œuvres et d’objets de décoration."
+      "description": "Arts de toutes les civilisations, savoir-faire locaux, tableaux de maîtres et objets d’art contemporain : découvrez une grande variété d'œuvres et d’objets de décoration."
     },
     {
       "id": 3,

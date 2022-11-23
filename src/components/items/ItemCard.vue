@@ -1,5 +1,5 @@
 <template>
-  <v-card class="mx-auto my-12">
+  <v-card class="mx-auto">
     <template slot="progress">
       <v-progress-linear color="deep-purple" height="10" indeterminate />
     </template>
@@ -10,11 +10,11 @@
     ></v-img>
 
     <v-card-title>
-      <div v-html="highlightTitle" />
+      <div v-html="highlightTitle"></div>
     </v-card-title>
 
     <v-card-text>
-      <div v-html="highlightDescription" />
+      <div v-html="highlightDescription"></div>
     </v-card-text>
 
   </v-card>

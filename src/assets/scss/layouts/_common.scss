@@ -13,22 +13,17 @@
       color: $black;
     }
   }
-}
 
-// categories
-.category {
-  &-card {
-    .v-card__title {
-      font-size: 0.9rem;
+  &--is-ltr {
+    .v-list-item__icon {
+      margin-right: 8px !important;
     }
   }
 }
 
-
 // block
 .block {
   padding: 60px 0;
-  border-bottom: 1px solid darken($white, 10%);
 
   @media only screen and (max-width: 599px) {
     padding: 20px 0;
@@ -63,15 +58,22 @@
   }
   &-left {
     padding-top: 0px;
+    
+    .block  {
+      padding-top: 0;
+    }
     > div {
-      >h2 {
+      > h2 {
         margin-bottom: 10px;
        &:after {
          left: 2.5%;
        }
       }
+
+      h4 {
+        font-size: 16px;
+      }
     }
-  
    }
 }
 
