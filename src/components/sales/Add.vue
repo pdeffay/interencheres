@@ -13,17 +13,15 @@
             </v-col>
             <v-col cols="12">
               <h4 class="text-left">Ajouter des lots</h4>
-              <v-container>
-                <v-row>
-                  <v-list>
-                    <v-list-item-group v-model="model" multiple color="green">
-                      <v-list-item v-for="(item, i) in availableItems" :key="i">
-                          <ItemCard :item="item" is-selectable=""/>
-                      </v-list-item>
-                    </v-list-item-group>
-                  </v-list>
-                </v-row>
-              </v-container>
+              <v-card>
+                <v-list>
+                  <v-list-item-group v-model="model" multiple color="green">
+                    <v-list-item v-for="(item, i) in availableItems" :key="i">
+                        <ItemCard :item="item" is-selectable=""/>
+                    </v-list-item>
+                  </v-list-item-group>
+                </v-list>
+              </v-card>
             </v-col>
             <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate" >
               Validate
@@ -61,7 +59,7 @@ export default {
     }
   },
   async beforeMount() {
-    this.availableItems = await itemsService.fetchAvailableItems();
+    this.availableItems = await itemsService.fetchItems();
   },  
   methods: {
     async validate () {

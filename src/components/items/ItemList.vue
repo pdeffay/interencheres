@@ -3,7 +3,7 @@
 		<v-container>
 			<h2 class="text-center">Lots</h2>
 			<v-row>
-				<v-col v-for="item of items" :key="item.id"  class="d-flex child-flex" cols="6" sm="4">
+				<v-col v-for="item of items" :key="item.id" class="d-flex child-flex" cols="6" sm="4">
 					<ItemCard :item="item" :searchedString="searchedString" />
 				</v-col>
 			</v-row>

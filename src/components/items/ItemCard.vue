@@ -9,10 +9,12 @@
       src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
     ></v-img>
 
-    <v-card-title :v-html="highlightTitle" />
+    <v-card-title>
+      <div v-html="highlightTitle" />
+    </v-card-title>
 
     <v-card-text>
-      <div v-html="highlightDescription"></div>
+      <div v-html="highlightDescription" />
     </v-card-text>
 
   </v-card>

@@ -1,5 +1,5 @@
 <template>
-    <v-card class="mx-auto" @click="openCategory">
+    <v-card class="mx-auto category-card" @click="openCategory">
        <template slot="progress">
          <v-progress-linear
            color="deep-purple"
