@@ -44,134 +44,7 @@
       "id": 6,
       "category_id": 2,
       "title": "Ah tiens une 3ème belle vente d'art",
-      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
-      "date": "2022-12-24",
-      "city": "Compiègne"
-    },
-    {
-      "title": "dddddddddddddd",
-      "description": "dddddddddddddddddd",
-      "item_ids": [],
-      "id": 7
-    },
-    {
-      "title": "zzzzzzzzzzzzzz",
-      "description": "zzzzzzzzzzzzzzzz",
-      "item_ids": [],
-      "category_id": 5,
-      "city": "LAVAL",
-      "date": "2022-11-25",
-      "id": 8
-    },
-    {
-      "title": "ssssssssssss",
-      "description": "ssssssssssssssssss",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 9
-    },
-    {
-      "title": "qqqqqqqqqqqqqq",
-      "description": "qqqqqqqqqqqqqqq",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 10
-    },
-    {
-      "title": "ddddddddddd",
-      "description": "dddddddddd",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 11
-    },
-    {
-      "title": "eeeeeeeeee",
-      "description": "eeeeeeeeeeee",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 12
-    },
-    {
-      "title": "eeeeeeeeee",
-      "description": "eeeeeeeeee",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 13
-    },
-    {
-      "title": "eeeeeeeeeeee",
-      "description": "eeeeeeeeeeee",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 14
-    },
-    {
-      "title": "eeeeeeeeeee",
-      "description": "eeeeeeeeee",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 15
-    },
-    {
-      "title": "rrrr",
-      "description": "rrrrrrrrrrr",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "laval",
-      "date": "2022-11-24",
-      "id": 16
-    },
-    {
-      "title": "eeeeeeeeee",
-      "description": "eeeeeeeeeeeeeeee",
-      "item_ids": [
-        5
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 17
-    },
-    {
-      "title": "eeeeeeeeeeeee",
-      "description": "eeeeeeeeeeeeeeeeee",
-      "item_ids": [
-        4
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 18
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ..."
     }
   ],
   "items": [
@@ -189,7 +62,7 @@
     },
     {
       "id": 3,
-      "sale_id": 2,
+      "sale_id": null,
       "title": "dd",
       "description": "zkefhzkelfhzklfjhazklefjhzqkel  IXème. Dimensions : 8,5 X11,3 cm."
     }

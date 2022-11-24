@@ -32,7 +32,7 @@ async function postSale(sale) {
     if (addedSale.status === 201) {
         for (let i = 0; i < sale.item_ids.length; i++) {
             console.log(addedSale.data.id);
-            itemsService.patchItem(sale.item_ids[i], addedSale.data.id);
+            await itemsService.patchItem(sale.item_ids[i], addedSale.data.id);
         }
     } else {
         deleteSale(sale.id);
