@@ -26,11 +26,11 @@
     },
     {
       "id": 4,
-      "category_id": 2,
-      "title": "Une deuxième belle vente d'art",
-      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
-      "date": "2022-12-08",
-      "city": "Douai"
+      "category_id": 9,
+      "title": "Juste un jouet !",
+      "description": "Dans cette vente vous ne trouverez qu'un seul jouet, that's it !",
+      "date": "2023-01-02",
+      "city": "BORDEAUX"
     },
     {
       "id": 5,
@@ -44,94 +44,99 @@
       "id": 6,
       "category_id": 2,
       "title": "Ah tiens une 3ème belle vente d'art",
-      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ..."
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2023-01-02",
+      "city": "BORDEAUX"
     },
     {
-      "title": "ozaidujoiazudoiaz",
-      "description": "azdazdazdzd",
-      "item_ids": [
-        3
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 7
-    },
-    {
-      "title": "adazdazdaz",
-      "description": "sazdazdazdazd",
-      "item_ids": [
-        3
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 8
-    },
-    {
-      "title": "azeazeaez",
-      "description": "azeaeazeaze",
-      "item_ids": [
-        3
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 9
-    },
-    {
-      "title": "azdadzad",
-      "description": "azdazdazdaz",
-      "item_ids": [
-        1,
-        2
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 10
-    },
-    {
-      "title": "azdazd",
-      "description": "azdadazdazd",
-      "item_ids": [
-        3
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 11
-    },
-    {
-      "title": "aaaaa",
-      "description": "azzzzzzzzzzzzzzz",
-      "item_ids": [
-        1
-      ],
-      "category_id": 1,
-      "city": "rennes",
-      "date": "2022-11-24",
-      "id": 12
+      "id": 7,
+      "category_id": 2,
+      "title": "Une deuxième belle vente d'art",
+      "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ...",
+      "date": "2022-12-08",
+      "city": "Douai"
     }
   ],
   "items": [
     {
       "id": 1,
-      "sale_id": null,
-      "title": "dd",
-      "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
+      "sale_id": 1,
+      "title": "PLAT ROND CREUX",
+      "description": "PLAT ROND CREUX d'Epoque Louis XV en argent 950 Millièmes à décor de moulures de filets et gravé d'armoiries timbrées d'une couronne de comte Poinçon de décharge Paris 1750-1756 P. 770 g D. 29,5 cm BE (rayures d'usage)",
+      "img": "plat",
+      "price": 58
     },
     {
       "id": 2,
-      "sale_id": 10,
-      "title": "dd",
-      "description": "Ecole Française fin XIXème 'E. De Varine Bohan','Portrait du chevalier du Haumel'. Huile sur toile signée en gravure sur la cadre et derrière 1896. Dimensions : 93 X 73 cm. Cadre style régence."
+      "sale_id": 1,
+      "title": "JATTE CARREE",
+      "description": "JATTE CARREE de Style Sèvres XVIIIème Siècle - Fin du XIXème Siècle signée Leveillé rue Thiroux en porcelaine blanche et bleu à décor de fruits, fleurs et oiseaux dans des cartouches Rocailles fleuries or 4 x 21,5 x 21,5 cm",
+      "img": "jatte",
+      "price": 180
     },
     {
       "id": 3,
-      "sale_id": 11,
-      "title": "dd",
-      "description": "zkefhzkelfhzklfjhazklefjhzqkel  IXème. Dimensions : 8,5 X11,3 cm."
+      "sale_id": 1,
+      "title": "PETITE CAFETIERE",
+      "description": "PETITE CAFETIERE A LA TURQUE d'Epoque 1860-1880 en argent Minerve 950 Millièmes uni, prise du couvercle toupie, anse baguée d'os Pb. 370 g H. 20 cm ON Y JOINT UNE PETITE TIMBALE en argent Minerve 950 Millièmes de Style Empire (accidentée)",
+      "img": "cafetiere",
+      "price": 60
+    },
+    {
+      "id": 4,
+      "sale_id": 4,
+      "title": "lego Harry Potter",
+      "description": "lego Harry Potter Hogwarts Express edition collector ref 76405",
+      "img": "harry",
+      "price": 250
+    },
+    {
+      "id": 5,
+      "sale_id": 3,
+      "title": "ASSIETTES IMMONDES",
+      "description": "Un lot d'assiettes immondes qui n'intéressent personne",
+      "img": "assiettes",
+      "price": 2
+    },
+    {
+      "id": 6,
+      "sale_id": 3,
+      "title": "BUFFET BAS",
+      "description": "Un buffet bas absolument incasable chez personne à moins d'avoir 170m²",
+      "img": "buffet",
+      "price": 890
+    },
+    {
+      "id": 7,
+      "sale_id": 2,
+      "title": "TABLEAU",
+      "description": "ECOLE PROBABLEMENT DU XVII EME SIECLE Portrait en buste de profil de Gastone de Fois (1489-1512) HUILE SUR TOILE",
+      "img": "tableau1",
+      "price": 7000
+    },
+    {
+      "id": 7,
+      "sale_id": 2,
+      "title": "TABLEAU 2",
+      "description": "D'Après Annibale CARACCI (1560-1609) Visage de jeune homme HUILE SUR TOILE (Fragment) 30,5 x 22 cm (Rentoilage, restauration, coupé sur deux bords) Cadre XIXème en bois noirci et doré",
+      "img": "tableau2",
+      "price": 540
+    },
+    {
+      "id": 8,
+      "sale_id": null,
+      "title": "UNE MOTO",
+      "description": "Une moto de dingue pour aller où vous voulez.",
+      "img": "moto",
+      "price": 12000
+    },
+    {
+      "id": 9,
+      "sale_id": null,
+      "title": "UNE TABLE",
+      "description": "Une table pas dingue qui ne va pas aller là où voulez.",
+      "img": "table",
+      "price": 13
     }
   ],
   "categories": [
@@ -139,7 +144,7 @@
       "id": 1,
       "title": "Ameublement",
       "slug": "ameublement",
-      "description": "Adepte du mobilier empire, collectionneur de pièces de design contemporain ou à la recherche de bonnes affaires sur la décoration ? Votre bonheur se cache ici. ",
+      "description": "Adepte du mobilier empire, collectionneur de pièces de design contemporain ou à la recherche de bonnes affaires sur la décoration ? Votre bonheur se cache ici."
     },
     {
       "id": 2,

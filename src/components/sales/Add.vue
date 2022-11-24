@@ -90,9 +90,10 @@
 import { mapGetters } from "vuex";
 import { salesService } from "@/api/SalesService";
 import { itemsService } from "@/api/ItemsService";
+import { categoriesService } from "@/api/CategoriesService";
 import { gouvService } from "@/api/GouvService";
-
 import ItemCard from "@/components/items/ItemCard.vue";
+
 export default {
   name: "Add",
   components: {
@@ -161,6 +162,9 @@ export default {
   },
   async beforeMount() {
     this.categories = this.getCategoryList;
+    if (this.categories.length === 0) {
+      this.categories = await categoriesService.fetchCategories(); 
+    }
     this.availableItems = await itemsService.fetchAvailableItems();
   },
   methods: {

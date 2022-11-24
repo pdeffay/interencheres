@@ -8,12 +8,14 @@
       <v-progress-linear color="deep-purple" height="10" indeterminate />
     </template>
 
-    <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png"></v-img>
+    <v-img height="250" :src="imgURL"></v-img>
 
     <v-card-title>
       <div v-html="highlightTitle"></div>
     </v-card-title>
-
+    <v-card-text>
+      {{ item.price }} €
+    </v-card-text>
     <v-card-text>
       <div v-html="highlightDescription"></div>
     </v-card-text>
@@ -36,6 +38,9 @@ export default {
     };
   },
   computed: {
+    imgURL() {
+      return require(`@/assets/img/${this.item.img}.webp`);
+    },
     highlightDescription() {
       if (!this.searchedString) {
         return this.item.description;

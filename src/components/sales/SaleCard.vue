@@ -3,7 +3,7 @@
     <v-img
       class="white--text align-end"
       height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+      src="https://picsum.photos/seed/picsum/200/300"
     >
       <v-card-title>
         <div v-html="highlightTitle"></div>  

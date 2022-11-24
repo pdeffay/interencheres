@@ -1,7 +1,7 @@
 <template>
   <div class="block">
     <v-container>
-      <h2 class="text-center">{{ sales.length > 0 ? `${sales.length} ventes`: '0 vente'}}</h2>
+      <h2 class="text-center">{{ sales.length > 1 ? `${sales.length} ventes`:  `${sales.length} vente`}}</h2>
         <v-row>
           <v-col v-for="sale of sales" :key="sale.id" class="d-flex child-flex" xs="12" xl="6" >
             <SaleCard :sale="sale" :searchedString="searchedString" />

@@ -1,18 +1,6 @@
 <template>
   <v-main>
     <CategoryList :categories="categories" />
-    <v-btn
-      fab
-      large
-      dark
-      fixed
-      bottom
-      left
-      class="v-btn--example"
-      @click="redirectToNewSale"
-    >
-      <v-icon>mdi-plus</v-icon>
-    </v-btn>
   </v-main>
 </template>
 
@@ -45,10 +33,7 @@ export default {
   methods: {
     ...mapActions({
       setCategoryList: "categoriesModule/setCategoryList",
-    }),
-    redirectToNewSale() {
-      this.$router.push({ name: "add" });
-    },
+    })
   },
 };
 </script>

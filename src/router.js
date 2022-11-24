@@ -18,7 +18,10 @@ const routes = [
     {
         path: "/sale/:id",
         name: "sale",
-        component: Sale
+        component: Sale,
+        children: [
+            
+        ]
     },
     {
         path: "/sales",
@@ -26,7 +29,7 @@ const routes = [
         component: Sales
     },
     {
-        path: "/sale/new",
+        path: "/new/sale",
         name: "add",
         component: Add
     },
@@ -45,6 +48,9 @@ const routes = [
 const router = new VueRouter({
     mode: "history",
     base: process.env.BASE_URL,
-    routes
+    routes,
+    scrollBehavior() {
+        document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
+    }
 });
 export default router;

@@ -21,7 +21,6 @@
       <v-toolbar-items class="hidden-xs-only">
         <v-btn text><router-link to="/">Acceuil</router-link></v-btn>
         <v-btn text><router-link to="/sales">Ventes</router-link></v-btn>
-        <v-btn text><router-link to="/items">Lots</router-link></v-btn>
       </v-toolbar-items>
       <div class="hidden-sm-and-up">
         <v-menu offset-y>
@@ -37,11 +36,6 @@
             <v-list-item>
               <v-list-item-title
                 ><router-link to="/sales">Ventes</router-link></v-list-item-title
-              >
-            </v-list-item>
-            <v-list-item>
-              <v-list-item-title
-                ><router-link to="/items">Lots</router-link></v-list-item-title
               >
             </v-list-item>
           </v-list>
@@ -69,7 +63,7 @@ export default {
   },
   methods: {
     onSearch() {
-      this.$router.push({ path: "/search", query: { search: this.searchText } });
+      this.$router.push({ path: "/search", query: { search: this.searchText } }).catch(() => {});
     },
   },
 };

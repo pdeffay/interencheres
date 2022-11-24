@@ -4,8 +4,14 @@
   font: 300 #{$base-font-size}/#{$base-line-height} $base-font-family;
   font-weight: 300;
 
+  .primary--text {
+    color: rgba(0,0,0,.87) !important;
+  }
   .container {
     max-width: 1200px;
+  }
+  a {
+    color: $black !important;
   }
 
   .responsiveMenu {

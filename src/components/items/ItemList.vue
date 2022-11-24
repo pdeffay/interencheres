@@ -2,16 +2,17 @@
   <div class="block">
     <v-container>
       <h2 class="text-center">
-        {{ items.length > 0 ? `${items.length} lots` : "0 lot" }}
+        {{ items.length > 1 ? `${items.length} lots` : `${items.length} lot` }}
       </h2>
       <v-row v-if="items.length > 0">
         <v-col v-for="item of items" :key="item.id" class="d-flex child-flex" sm="4">
           <ItemCard :item="item" :searchedString="searchedString" :selectable="selectable"/>
         </v-col>
       </v-row>
-      <v-row v-else>
+      <div class="d-flex flex-column align-center justify-center no-result" v-else>
+        <span class="material-icons">sentiment_very_dissatisfied</span>
         <h4 class="text-center">Cette vente ne comporte aucun lot</h4>
-      </v-row>
+      </div>
     </v-container>
   </div>
 </template>
@@ -31,3 +32,8 @@ export default {
   },
 };
 </script>
+<style>
+.no-result {
+  height: 50vh;
+}
+</style>
