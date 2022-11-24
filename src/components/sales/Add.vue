@@ -1,5 +1,8 @@
 <template>
   <div class="block">
+    <v-snackbar :timeout="2000" :value="alert" absolute bottom tile color="red accent-2">
+      Veuillez sélectionner au moins un lot !
+    </v-snackbar>
     <v-container>
       <h2 class="text-center">Ajouter une nouvelle vente</h2>
       <v-form ref="form" v-model="valid">
@@ -61,8 +64,13 @@
                     class="d-flex child-flex"
                     cols="6"
                     sm="4"
+                    :rules="itemsRule"
                   >
-                    <ItemCard :item="item" />
+                    <ItemCard
+                      :item="item"
+                      :selectedItemIds="itemIds"
+                      @onItemClick="onItemClick"
+                    />
                   </v-col>
                 </v-row>
               </v-container>
@@ -92,6 +100,7 @@ export default {
   data() {
     return {
       availableItems: [],
+      selectedItems: [],
       valid: false,
       title: "",
       description: "",
@@ -106,12 +115,14 @@ export default {
         (v) => !!v || "Une description est requise",
         (v) => v.length >= 10 || "La description doit avoir plus de 10 caractères",
       ],
+      itemsRule: [(v) => v.length > 0 || "AU moins un lot doit être sélectionné"],
       cityRules: [(v) => !!v || "Une nom de ville est requis"],
       model: [],
       categories: [],
       date: new Date().toISOString().substr(0, 10),
       city: "",
       errors: [],
+      alert: false,
     };
   },
   computed: {
@@ -141,13 +152,30 @@ export default {
         }
       },
     },
+    itemIds: {
+      handler(value) {
+        value.length > 0 ? this.valid && true : this.valid && false;
+      },
+    },
   },
   async beforeMount() {
     this.categories = this.getCategoryList;
-    this.availableItems = await itemsService.fetchItems();
+    this.availableItems = await itemsService.fetchAvailableItems();
   },
   methods: {
+    isInItemsArray(itemId) {
+      for (var i = 0; i < this.itemIds.length; i++) {
+        if (this.itemIds[i] === itemId) {
+          return true;
+        }
+      }
+      return false;
+    },
     async validate() {
+      if (this.itemIds.length === 0) {
+        this.alert = true;
+        return;
+      }
       const sale = {
         title: this.title,
         description: this.description,
@@ -157,6 +185,17 @@ export default {
         date: this.date,
       };
       await salesService.postSale(sale);
+    },
+    onItemClick(item) {
+      const itemId = item.id;
+      if (!this.isInItemsArray(itemId)) {
+        this.itemIds.push(itemId);
+      } else {
+        const index = this.itemIds.indexOf(itemId);
+        if (index > -1) {
+          this.itemIds.splice(index, 1);
+        }
+      }
     },
   },
 };

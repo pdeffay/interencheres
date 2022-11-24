@@ -1,5 +1,9 @@
 <template>
-  <v-card class="mx-auto">
+  <v-card
+    class="mx-auto"
+    :class="this.isActive ? 'selected' : 'not-selected'"
+    @click="onItemClicked"
+  >
     <template slot="progress">
       <v-progress-linear color="deep-purple" height="10" indeterminate />
     </template>
@@ -22,6 +26,13 @@ export default {
   props: {
     item: Object,
     searchedString: String,
+    isItemSelected: Boolean,
+    selectedItemIds: [],
+  },
+  data() {
+    return {
+      isActive: false,
+    };
   },
   computed: {
     highlightDescription() {
@@ -44,11 +55,36 @@ export default {
       });
     },
   },
-  methods: {},
+  watch: {
+    selectedItemIds: {
+      handler(value) {
+        for (var i = 0; i < value.length; i++) {
+          if (value[i] === this.item.id) {
+            this.isActive = true;
+            return;
+          }
+        }
+        this.isActive = false;
+      },
+    },
+  },
+  methods: {
+    onItemClicked() {
+      this.$emit("onItemClick", this.item);
+    },
+  },
 };
 </script>
-<style>
+<style lang="scss">
 .highlightText {
   color: red;
+}
+
+.selected.v-card {
+  box-shadow: 10px 10px 5px -5px rgba(167, 255, 169, 1),
+    0 2px 2px 0 rgba(116, 211, 39, 0.14), 0 1px 5px 0 rgb(0 0 0 / 12%) !important;
+}
+.selected {
+  color: green !important;
 }
 </style>

@@ -7,6 +7,12 @@ async function fetchItems() {
     return items.data;
 }
 
+async function fetchItem(id) {
+    let items = [];    
+    items = await axios.get(`${baseUrl}/items?id=${id}`);
+    return items.data;
+}
+
 async function fetchItemList(searchString) {
     let items = [];    
     items = await axios.get(`${baseUrl}/items?q=${searchString}`);
@@ -32,9 +38,25 @@ async function fetchAvailableItems() {
     return availableItems;
 }
 
+async function patchItem(itemId, saleId) {
+    const item = await fetchItem(itemId);
+    axios.put(`${baseUrl}/items/${itemId}`, {
+        title: item.title,
+        description:item.description,
+        sale_id: saleId,
+      }).then(resp => {
+
+    console.log(resp.data);
+}).catch(error => {
+
+    console.log(error);
+});
+}
+
 export const itemsService = {
     fetchItems,
     fetchItemList,
     fetchItemsBySaleId,
-    fetchAvailableItems
+    fetchAvailableItems,
+    patchItem
 };
