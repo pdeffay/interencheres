@@ -1,5 +1,5 @@
 <template>
-  <v-card outlined class="mx-auto" @click="openSale">
+  <v-card outlined class="" @click="openSale">
     <v-img
       class="white--text align-end"
       height="200px"

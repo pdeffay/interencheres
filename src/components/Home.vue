@@ -1,7 +1,16 @@
 <template>
   <v-main>
     <CategoryList :categories="categories" />
-    <v-btn fab large dark fixed bottom left class="v-btn--example" @click="redirectToNewSale">
+    <v-btn
+      fab
+      large
+      dark
+      fixed
+      bottom
+      left
+      class="v-btn--example"
+      @click="redirectToNewSale"
+    >
       <v-icon>mdi-plus</v-icon>
     </v-btn>
   </v-main>
@@ -10,16 +19,16 @@
 <script>
 import { mapActions } from "vuex";
 import { categoriesService } from "@/api/CategoriesService";
-import CategoryList  from '@/components/categories/CategoryList';
+import CategoryList from "@/components/categories/CategoryList";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
-    CategoryList
+    CategoryList,
   },
 
   props: {
-    msg: String
+    msg: String,
   },
 
   data() {
@@ -32,15 +41,14 @@ export default {
     this.categories = await categoriesService.fetchCategories();
     this.setCategoryList(this.categories);
   },
-  
+
   methods: {
     ...mapActions({
-      setCategoryList: "categoriesModule/setCategoryList"
+      setCategoryList: "categoriesModule/setCategoryList",
     }),
     redirectToNewSale() {
-      this.$router.push({name: 'add'})
+      this.$router.push({ name: "add" });
     },
-    
-  }
-}
+  },
+};
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div class="block block-left">
     <v-container>
-      <h2 class="text-left">{{sale.title}}</h2>
-      <h4 class="text-left">{{sale.description}}</h4>
+      <h2 class="text-left">{{ sale.title }}</h2>
+      <h4 class="text-left">{{ sale.description }}</h4>
       <ItemList :items="items" />
     </v-container>
   </div>
@@ -10,40 +10,40 @@
 
 <script>
 import { mapActions, mapGetters } from "vuex";
-import ItemList from '@/components/items/ItemList.vue';
+import ItemList from "@/components/items/ItemList.vue";
 import { itemsService } from "@/api/ItemsService";
 import { salesService } from "@/api/SalesService";
 
 export default {
-  name: 'Sale',
+  name: "Sale",
   components: {
-    ItemList
+    ItemList,
   },
 
   data() {
-		return {
-			items: [],
-      sale: {}
-		}
+    return {
+      items: [],
+      sale: {},
+    };
   },
   computed: {
     ...mapGetters({
-      getSelectedSale: "salesModule/getSelectedSale"
+      getSelectedSale: "salesModule/getSelectedSale",
     }),
   },
   methods: {
     ...mapActions({
-      setSelectedSale: "salesModule/setSelectedSale"
+      setSelectedSale: "salesModule/setSelectedSale",
     }),
   },
   async beforeCreate() {
     // Si on a une vente de sélectionnée dans le store
-    if (this.getSelectedSale){
+    if (this.getSelectedSale) {
       this.sale = this.getSelectedSale;
-      if(this.sale) {
+      if (this.sale) {
         this.items = await itemsService.fetchItemsBySaleId(this.sale.id);
       }
-    // Sinon on récupère depuis l'id dans l'URL  
+      // Sinon on récupère depuis l'id dans l'URL
     } else {
       this.sale = await salesService.fetchSale(this.$route.params.id);
       if (this.sale) {
@@ -54,5 +54,5 @@ export default {
   beforeDestroy() {
     this.setSelectedSale(null);
   },
-}
+};
 </script>
