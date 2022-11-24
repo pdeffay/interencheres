@@ -45,24 +45,91 @@
       "category_id": 2,
       "title": "Ah tiens une 3ème belle vente d'art",
       "description": "Suite à successions : vente de beau mobilier, objets d'art, tableaux anciens et modernes, pendule en bronze doré ..."
+    },
+    {
+      "title": "ozaidujoiazudoiaz",
+      "description": "azdazdazdzd",
+      "item_ids": [
+        3
+      ],
+      "category_id": 1,
+      "city": "rennes",
+      "date": "2022-11-24",
+      "id": 7
+    },
+    {
+      "title": "adazdazdaz",
+      "description": "sazdazdazdazd",
+      "item_ids": [
+        3
+      ],
+      "category_id": 1,
+      "city": "rennes",
+      "date": "2022-11-24",
+      "id": 8
+    },
+    {
+      "title": "azeazeaez",
+      "description": "azeaeazeaze",
+      "item_ids": [
+        3
+      ],
+      "category_id": 1,
+      "city": "rennes",
+      "date": "2022-11-24",
+      "id": 9
+    },
+    {
+      "title": "azdadzad",
+      "description": "azdazdazdaz",
+      "item_ids": [
+        1,
+        2
+      ],
+      "category_id": 1,
+      "city": "rennes",
+      "date": "2022-11-24",
+      "id": 10
+    },
+    {
+      "title": "azdazd",
+      "description": "azdadazdazd",
+      "item_ids": [
+        3
+      ],
+      "category_id": 1,
+      "city": "rennes",
+      "date": "2022-11-24",
+      "id": 11
+    },
+    {
+      "title": "aaaaa",
+      "description": "azzzzzzzzzzzzzzz",
+      "item_ids": [
+        1
+      ],
+      "category_id": 1,
+      "city": "rennes",
+      "date": "2022-11-24",
+      "id": 12
     }
   ],
   "items": [
     {
       "id": 1,
-      "sale_id": 1,
+      "sale_id": null,
       "title": "dd",
       "description": "Petit cache pot en porcelaine tendre monogrammé sur les deux faces. Marque découronné ' Duc d'Angoulême' ?. Epoque XIXème. Dimensions : 8,5 X11,3 cm."
     },
     {
       "id": 2,
-      "sale_id": 1,
+      "sale_id": 10,
       "title": "dd",
       "description": "Ecole Française fin XIXème 'E. De Varine Bohan','Portrait du chevalier du Haumel'. Huile sur toile signée en gravure sur la cadre et derrière 1896. Dimensions : 93 X 73 cm. Cadre style régence."
     },
     {
       "id": 3,
-      "sale_id": null,
+      "sale_id": 11,
       "title": "dd",
       "description": "zkefhzkelfhzklfjhazklefjhzqkel  IXème. Dimensions : 8,5 X11,3 cm."
     }
@@ -72,7 +139,7 @@
       "id": 1,
       "title": "Ameublement",
       "slug": "ameublement",
-      "description": "Adepte du mobilier empire, collectionneur de pièces de design contemporain ou à la recherche de bonnes affaires sur la décoration ? Votre bonheur se cache ici. "
+      "description": "Adepte du mobilier empire, collectionneur de pièces de design contemporain ou à la recherche de bonnes affaires sur la décoration ? Votre bonheur se cache ici. ",
     },
     {
       "id": 2,
@@ -130,21 +197,21 @@
     },
     {
       "id": 11,
-      "title": "Voitures de sport et de collection",
-      "slug": "autres-vehicules-et-engins",
+      "title": "Voiture",
+      "slug": "voitures-de-sport-et-de-collection-1",
       "description": "Amateurs et grands collectionneurs, découvrez toute la gamme de véhicules historiques et de voitures de luxe."
-    },
-    {
-      "id": 12,
-      "title": "Autres véhicules et engins",
-      "slug": "autres-vehicules-et-engins",
-      "description": "Des bateaux aux avions en passant par toute une panoplie de véhicules terrestres, voitures, camions et motos, découvrez les véhicules et engins aux enchères."
     },
     {
       "id": 13,
       "title": "Éléctoménager matériel pro.",
       "slug": "materiels-professionnels",
       "description": "Petit outillage et électroménager de seconde main ainsi qu’une large variété de matériels professionnels en vente aux enchères."
+    },
+    {
+      "id": 12,
+      "title": "Autres véhicules et engins",
+      "slug": "autres-vehicules-et-engins",
+      "description": "Des bateaux aux avions en passant par toute une panoplie de véhicules terrestres, voitures, camions et motos, découvrez les véhicules et engins aux enchères."
     }
   ]
 }

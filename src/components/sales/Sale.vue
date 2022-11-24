@@ -3,7 +3,7 @@
     <v-container>
       <h2 class="text-left">{{ sale.title }}</h2>
       <h4 class="text-left">{{ sale.description }}</h4>
-      <ItemList :items="items" />
+      <ItemList :items="items" :selectable="false" />
     </v-container>
   </div>
 </template>

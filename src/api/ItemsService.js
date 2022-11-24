@@ -10,7 +10,9 @@ async function fetchItems() {
 async function fetchItem(id) {
     let items = [];    
     items = await axios.get(`${baseUrl}/items?id=${id}`);
-    return items.data;
+    if (items.data.length > 0 && items.data.length < 2) {
+        return items.data[0];
+    }
 }
 
 async function fetchItemList(searchString) {
@@ -40,19 +42,17 @@ async function fetchAvailableItems() {
 
 async function patchItem(itemId, saleId) {
     const item = await fetchItem(itemId);
-
+    console.log(item, saleId);
     await axios.put(`${baseUrl}/items/${itemId}`, {
         id: item.id,
         sale_id: saleId,
         title: item.title,
         description:item.description,
       }).then(resp => {
-
-    console.log(resp.data);
-}).catch(error => {
-
-    console.log(error);
-});
+        console.log(resp.data);
+        }).catch(error => {
+            console.log(error);
+        });
 }
 
 export const itemsService = {

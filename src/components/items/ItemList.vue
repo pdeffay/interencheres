@@ -6,7 +6,7 @@
       </h2>
       <v-row v-if="items.length > 0">
         <v-col v-for="item of items" :key="item.id" class="d-flex child-flex" sm="4">
-          <ItemCard :item="item" :searchedString="searchedString" />
+          <ItemCard :item="item" :searchedString="searchedString" :selectable="selectable"/>
         </v-col>
       </v-row>
       <v-row v-else>
@@ -27,6 +27,7 @@ export default {
   props: {
     items: [],
     searchedString: String,
+    selectable: { type: Boolean, default: false }
   },
 };
 </script>

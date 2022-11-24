@@ -69,6 +69,7 @@
                     <ItemCard
                       :item="item"
                       :selectedItemIds="itemIds"
+                      :selectable="true"
                       @onItemClick="onItemClick"
                     />
                   </v-col>
@@ -184,7 +185,11 @@ export default {
         city: this.city,
         date: this.date,
       };
-      await salesService.postSale(sale);
+      const addedSale = await salesService.postSale(sale);
+      console.log(addedSale);
+      if (addedSale.status === 201) {
+        this.$router.push({name:"sale", params: { id: addedSale.data.id }})
+      }
     },
     onItemClick(item) {
       const itemId = item.id;

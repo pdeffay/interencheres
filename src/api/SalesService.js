@@ -35,8 +35,11 @@ async function postSale(sale) {
             await itemsService.patchItem(sale.item_ids[i], addedSale.data.id);
         }
     } else {
-        deleteSale(sale.id);
+        // Rollback de l'insertion
+        await deleteSale(sale.id);
+        return;
     }
+    return addedSale;
 }
 
 async function fetchSalesByCategoryId(categoryId) {

@@ -1,7 +1,7 @@
 <template>
   <v-card
     class="mx-auto"
-    :class="this.isActive ? 'selected' : 'not-selected'"
+    :class="cardClasses"
     @click="onItemClicked"
   >
     <template slot="progress">
@@ -28,6 +28,7 @@ export default {
     searchedString: String,
     isItemSelected: Boolean,
     selectedItemIds: [],
+    selectable: { type: Boolean, default: false }
   },
   data() {
     return {
@@ -45,6 +46,13 @@ export default {
           return '<span class="highlightText">' + match + "</span>";
         }
       );
+    },
+    cardClasses() {
+      let classes = "";
+      this.isActive ? classes += 'selected ' : classes += 'not-selected ';
+      this.selectable ? classes += 'clickable' : classes += 'not-clickable';
+
+      return classes;
     },
     highlightTitle() {
       if (!this.searchedString) {
@@ -86,5 +94,9 @@ export default {
 }
 .selected {
   color: green !important;
+}
+
+.not-clickable {
+  cursor: initial !important;
 }
 </style>

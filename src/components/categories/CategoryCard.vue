@@ -8,7 +8,7 @@
       ></v-progress-linear>
     </template>
 
-    <v-img height="250" src="https://cdn.vuetifyjs.com/images/cards/cooking.png"></v-img>
+    <v-img height="250" :src="imgURL"></v-img>
 
     <v-card-title> {{ category.title }} </v-card-title>
   </v-card>
@@ -21,6 +21,11 @@ export default {
   name: "CategoryCard",
   props: {
     category: Object,
+  },
+  computed: {
+    imgURL() {
+      return require(`@/assets/img/${this.category.slug}.webp`);
+    }
   },
   methods: {
     ...mapActions({
