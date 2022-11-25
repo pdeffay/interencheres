@@ -5,11 +5,22 @@
         {{ items.length > 1 ? `${items.length} lots` : `${items.length} lot` }}
       </h2>
       <v-row v-if="items.length > 0">
-        <v-col v-for="item of items" :key="item.id" class="d-flex child-flex" sm="4">
-          <ItemCard :item="item" :searchedString="searchedString" :selectable="selectable"/>
+        <v-col
+          v-for="item of items"
+          :key="item.id"
+          class="d-flex child-flex"
+          xs="4"
+          md="4"
+          xl="6"
+        >
+          <ItemCard
+            :item="item"
+            :searchedString="searchedString"
+            :selectable="selectable"
+          />
         </v-col>
       </v-row>
-      <div class="d-flex flex-column align-center justify-center no-result" v-else>
+      <div v-else class="d-flex flex-column align-center justify-center no-result">
         <span class="material-icons">sentiment_very_dissatisfied</span>
         <h4 class="text-center">Il n'y a malheuresement aucun lot</h4>
       </div>
@@ -28,12 +39,12 @@ export default {
   props: {
     items: [],
     searchedString: String,
-    selectable: { type: Boolean, default: false }
+    selectable: { type: Boolean, default: false },
   },
 };
 </script>
-<style>
+<style sccoped>
 .no-result {
-  height: 50vh;
+  height: 40vh;
 }
 </style>

@@ -43,7 +43,6 @@
       </div>
     </v-toolbar>
   </v-container>
-
 </template>
 
 <script>
@@ -64,7 +63,9 @@ export default {
   },
   methods: {
     onSearch() {
-      this.$router.push({ path: "/search", query: { search: this.searchText } }).catch(() => {});
+      this.$router
+        .push({ path: "/search", query: { search: this.searchText } })
+        .catch(() => {});
     },
   },
 };

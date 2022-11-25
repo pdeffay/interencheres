@@ -5,9 +5,9 @@ import App from './App.vue';
 import vuetify from '@/plugins/vuetify';
 import VueKonami from 'vue-konami'
 
-Vue.use(VueKonami)
 import '@/assets/scss/main.scss';
 
+Vue.use(VueKonami);
 Vue.config.productionTip = false;
 
 new Vue({

@@ -1,9 +1,5 @@
 <template>
-  <v-card
-    class="mx-auto"
-    :class="cardClasses"
-    @click="onItemClicked"
-  >
+  <v-card class="mx-auto" :class="cardClasses" @click="onItemClicked">
     <template slot="progress">
       <v-progress-linear color="deep-purple" height="10" indeterminate />
     </template>
@@ -13,9 +9,7 @@
     <v-card-title>
       <div v-html="highlightTitle"></div>
     </v-card-title>
-    <v-card-text>
-      {{ item.price }} €
-    </v-card-text>
+    <v-card-text> {{ item.price }} € </v-card-text>
     <v-card-text>
       <div v-html="highlightDescription"></div>
     </v-card-text>
@@ -30,7 +24,7 @@ export default {
     searchedString: String,
     isItemSelected: Boolean,
     selectedItemIds: [],
-    selectable: { type: Boolean, default: false }
+    selectable: { type: Boolean, default: false },
   },
   data() {
     return {
@@ -54,8 +48,8 @@ export default {
     },
     cardClasses() {
       let classes = "";
-      this.isActive ? classes += 'selected ' : classes += 'not-selected ';
-      this.selectable ? classes += 'clickable' : classes += 'not-clickable';
+      this.isActive ? (classes += "selected ") : (classes += "not-selected ");
+      this.selectable ? (classes += "clickable") : (classes += "not-clickable");
 
       return classes;
     },

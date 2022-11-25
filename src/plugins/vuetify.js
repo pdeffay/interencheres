@@ -10,12 +10,7 @@ const opts = {
         light: true,
         themes: {
           light: {
-  
-            // Color is applied to selected drop down item
-            primary: '#000',
-            
-            // Uncomment this to make things worse
-            // 'primary--text': '#FF00FF'
+            primary: '#000'
           }
         }
       }

@@ -6,7 +6,7 @@
       src="https://picsum.photos/seed/picsum/200/300"
     >
       <v-card-title>
-        <div v-html="highlightTitle"></div>  
+        <div v-html="highlightTitle"></div>
       </v-card-title>
     </v-img>
     <v-card-subtitle class="pb-0">{{ sale.subtitle }}</v-card-subtitle>
@@ -17,11 +17,11 @@
       <v-list-item-icon>
         <v-icon>mdi-map-marker</v-icon>
       </v-list-item-icon>
-      <v-list-item-subtitle>{{sale.city}}</v-list-item-subtitle>
+      <v-list-item-subtitle>{{ sale.city }}</v-list-item-subtitle>
       <v-list-item-icon>
         <v-icon>mdi-clock</v-icon>
       </v-list-item-icon>
-      <v-list-item-subtitle>{{sale.date}}</v-list-item-subtitle>
+      <v-list-item-subtitle>{{ sale.date }}</v-list-item-subtitle>
     </v-list-item>
     <v-card-actions>
       <v-btn color="primary" text>Voir</v-btn>
@@ -32,38 +32,41 @@
 <script>
 import { mapActions } from "vuex";
 export default {
-  name: 'SaleCard',
+  name: "SaleCard",
   props: {
     sale: Object,
-    searchedString: String
+    searchedString: String,
   },
   computed: {
     highlightDescription() {
-      if(!this.searchedString) {
+      if (!this.searchedString) {
         return this.sale.description;
       }
-      return this.sale.description.replace(new RegExp(this.searchedString, "gi"), match => {
-          return '<span class="highlightText">' + match + '</span>';
-      });
+      return this.sale.description.replace(
+        new RegExp(this.searchedString, "gi"),
+        (match) => {
+          return '<span class="highlightText">' + match + "</span>";
+        }
+      );
     },
     highlightTitle() {
-      if(!this.searchedString) {
+      if (!this.searchedString) {
         return this.sale.title;
       }
-      return this.sale.title.replace(new RegExp(this.searchedString, "gi"), match => {
-          return '<span class="highlightText">' + match + '</span>';
+      return this.sale.title.replace(new RegExp(this.searchedString, "gi"), (match) => {
+        return '<span class="highlightText">' + match + "</span>";
       });
-    }
+    },
   },
   methods: {
     ...mapActions({
-      setSelectedSale: "salesModule/setSelectedSale"
+      setSelectedSale: "salesModule/setSelectedSale",
     }),
 
     openSale() {
       this.setSelectedSale(this.sale);
-      this.$router.push({name:"sale", params: { id: this.sale.id }})
-    }
-  }
-}
+      this.$router.push({ name: "sale", params: { id: this.sale.id } });
+    },
+  },
+};
 </script>

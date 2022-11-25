@@ -33,7 +33,7 @@ export default {
   methods: {
     ...mapActions({
       setCategoryList: "categoriesModule/setCategoryList",
-    })
+    }),
   },
 };
 </script>

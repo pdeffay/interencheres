@@ -1,11 +1,9 @@
 const getDefaultState = () => {
   return {
-    // Activité selectionnée pour traitement
     selectedSale: null,
   };
 };
 
-// initial state
 const state = getDefaultState();
 
 // getters

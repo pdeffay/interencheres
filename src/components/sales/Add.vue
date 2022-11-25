@@ -53,7 +53,7 @@
               </v-col>
             </v-row>
           </v-row>
-          <v-row>
+          <v-row class="d-flex justify-center py-5">
             <v-col cols="12">
               <h4 class="text-left">Ajouter des lots</h4>
               <v-container>
@@ -76,7 +76,7 @@
                 </v-row>
               </v-container>
             </v-col>
-            <v-btn :disabled="!valid" color="success" class="mr-4" @click="validate">
+            <v-btn :disabled="!valid" color="success" class="mt-5" @click="validate">
               Valider
             </v-btn>
           </v-row>
@@ -163,7 +163,7 @@ export default {
   async beforeMount() {
     this.categories = this.getCategoryList;
     if (this.categories.length === 0) {
-      this.categories = await categoriesService.fetchCategories(); 
+      this.categories = await categoriesService.fetchCategories();
     }
     this.availableItems = await itemsService.fetchAvailableItems();
   },
@@ -191,7 +191,7 @@ export default {
       };
       const addedSale = await salesService.postSale(sale);
       if (addedSale.status === 201) {
-        this.$router.push({name:"sale", params: { id: addedSale.data.id }})
+        this.$router.push({ name: "sale", params: { id: addedSale.data.id } });
       }
     },
     onItemClick(item) {

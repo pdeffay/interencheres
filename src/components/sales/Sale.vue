@@ -3,7 +3,7 @@
     <v-container>
       <h2 class="text-left">{{ sale.title }}</h2>
       <h4 class="text-left">{{ sale.description }}</h4>
-      {{dateAndPLace}}
+      {{ dateAndPLace }}
 
       <ItemList :items="items" :selectable="false" />
     </v-container>
@@ -32,9 +32,9 @@ export default {
     ...mapGetters({
       getSelectedSale: "salesModule/getSelectedSale",
     }),
-    dateAndPLace(){
-      return `A ${this.sale.city} le ${this.sale.date}` 
-    }
+    dateAndPLace() {
+      return `A ${this.sale.city} le ${this.sale.date}`;
+    },
   },
   methods: {
     ...mapActions({

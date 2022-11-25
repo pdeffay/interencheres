@@ -25,7 +25,7 @@ export default {
   computed: {
     imgURL() {
       return require(`@/assets/img/${this.category.slug}.webp`);
-    }
+    },
   },
   methods: {
     ...mapActions({

@@ -8,6 +8,7 @@
           :key="category.id"
           class="d-flex child-flex"
           xs="4"
+          md="6"
           xl="3"
         >
           <CategoryCard :category="category" />
