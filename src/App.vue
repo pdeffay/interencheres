@@ -69,7 +69,6 @@ export default {
       this.$router.push({ name: "add" });
     },
     easterEgg () {
-      console.log('jlkjl')
       this.show = true;
     }
   }
