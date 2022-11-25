@@ -3,7 +3,9 @@ import router from "./router";
 import store from "./store";
 import App from './App.vue';
 import vuetify from '@/plugins/vuetify';
+import VueKonami from 'vue-konami'
 
+Vue.use(VueKonami)
 import '@/assets/scss/main.scss';
 
 Vue.config.productionTip = false;

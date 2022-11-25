@@ -115,7 +115,7 @@
       "price": 7000
     },
     {
-      "id": 7,
+      "id": 8,
       "sale_id": 2,
       "title": "TABLEAU 2",
       "description": "D'Après Annibale CARACCI (1560-1609) Visage de jeune homme HUILE SUR TOILE (Fragment) 30,5 x 22 cm (Rentoilage, restauration, coupé sur deux bords) Cadre XIXème en bois noirci et doré",
@@ -123,7 +123,7 @@
       "price": 540
     },
     {
-      "id": 8,
+      "id": 9,
       "sale_id": null,
       "title": "UNE MOTO",
       "description": "Une moto de dingue pour aller où vous voulez.",
@@ -131,7 +131,7 @@
       "price": 12000
     },
     {
-      "id": 9,
+      "id": 10,
       "sale_id": null,
       "title": "UNE TABLE",
       "description": "Une table pas dingue qui ne va pas aller là où voulez.",

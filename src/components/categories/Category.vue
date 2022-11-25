@@ -1,5 +1,30 @@
 <template>
+  
   <div class="block block-left">
+     <!-- Modale Easter Egg -->
+     <v-dialog
+        transition="dialog-top-transition"
+        max-width="600"
+        :show="show"
+      >
+     <template v-slot:default="dialog">
+          <v-card>
+            <v-toolbar
+              color="primary"
+              dark
+            >Opening from the top</v-toolbar>
+            <v-card-text>
+              <div class="text-h2 pa-12">Hello world!</div>
+            </v-card-text>
+            <v-card-actions class="justify-end">
+              <v-btn
+                text
+                @click="dialog.value = false"
+              >Close</v-btn>
+            </v-card-actions>
+          </v-card>
+        </template>
+      </v-dialog>
     <v-container>
       <h2 class="text-left">{{ category.title }}</h2>
       <h4 class="text-left">{{ category.description }}</h4>
@@ -10,8 +35,7 @@
         </h4>
         <h4 class="text-center">
           Si vous voulez remédier à cela, c'est
-          <router-link to="sale/new"><a>ici</a></router-link
-          >.
+          <router-link to="/new/sale"><a>ici</a></router-link>.
         </h4>
       </div>
     </v-container>

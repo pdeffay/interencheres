@@ -42,17 +42,8 @@ async function fetchAvailableItems() {
 
 async function patchItem(itemId, saleId) {
     const item = await fetchItem(itemId);
-    console.log(item, saleId);
-    await axios.put(`${baseUrl}/items/${itemId}`, {
-        id: item.id,
-        sale_id: saleId,
-        title: item.title,
-        description:item.description,
-      }).then(resp => {
-        console.log(resp.data);
-        }).catch(error => {
-            console.log(error);
-        });
+    item.sale_id = saleId;
+    await axios.put(`${baseUrl}/items/${itemId}`, item);
 }
 
 export const itemsService = {

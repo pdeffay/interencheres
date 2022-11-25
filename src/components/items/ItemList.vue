@@ -11,7 +11,7 @@
       </v-row>
       <div class="d-flex flex-column align-center justify-center no-result" v-else>
         <span class="material-icons">sentiment_very_dissatisfied</span>
-        <h4 class="text-center">Cette vente ne comporte aucun lot</h4>
+        <h4 class="text-center">Il n'y a malheuresement aucun lot</h4>
       </div>
     </v-container>
   </div>

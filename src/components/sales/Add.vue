@@ -190,7 +190,6 @@ export default {
         date: this.date,
       };
       const addedSale = await salesService.postSale(sale);
-      console.log(addedSale);
       if (addedSale.status === 201) {
         this.$router.push({name:"sale", params: { id: addedSale.data.id }})
       }
